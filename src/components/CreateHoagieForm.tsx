@@ -169,6 +169,7 @@ const CreateHoagieForm = ({userId, onSuccess}: CreateHoagieFormProps) => {
           title="Add"
           onPress={addIngredient}
           size="small"
+          textStyle={{color: '#ffffff'}}
           accessibilityLabel="Add ingredient button"
           accessibilityHint="Adds the ingredient to your hoagie"
         />
@@ -219,6 +220,7 @@ const CreateHoagieForm = ({userId, onSuccess}: CreateHoagieFormProps) => {
         disabled={createHoagieMutation.isPending}
         loading={createHoagieMutation.isPending}
         style={styles.createButton}
+        textStyle={{color: '#ffffff'}}
         accessibilityLabel="Create hoagie button"
         accessibilityHint="Submits the form to create your hoagie"
       />
