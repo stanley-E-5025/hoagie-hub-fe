@@ -75,18 +75,18 @@ cd sandwich-app
 2. Install dependencies:
 
 ```sh
-npm install
-# or with yarn
-yarn install
+npm install --legacy-peer-deps
 ```
 
 3. For iOS, install CocoaPods dependencies:
 
 ```sh
-bundle install
 cd ios
-bundle exec pod install
+rm -rf build/ Pods/ DerivedData/
+pod install
 cd ..
+npx react-native start
+npx react-native run-ios
 ```
 
 ### Environment Setup
@@ -94,7 +94,7 @@ cd ..
 1. Create a `.env` file in the project root:
 
 ```sh
-API_URL=https://your-api-url.com/api
+API_URL=http://localhost:3000/v1
 ```
 
 2. Make sure you have the React Native CLI installed:
